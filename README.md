@@ -11,13 +11,9 @@ Hades detects singularities in data, where the Manifold Hypothesis fails. Singul
 
 ## Installation.
 
-To install, use `poetry` or `pip`:
+To install, run the following:
 ```
-$ poetry install
-```
-or
-```
-$ pip install .
+$ pip install git+https://github.com/uzulim/hades.git
 ```
 
 ## Usage
