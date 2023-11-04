@@ -1,5 +1,7 @@
 # HADES: Fast Singularity Detection with Kernel
 
+<img width="1008" alt="banner" src="https://github.com/uzulim/hades/assets/56029596/9fb3e785-2ad5-4d8b-baf8-479f45d1d747">
+
 by Uzu Lim, Harald Oberhauser, and Vidit Nanda
 
 Hades detects singularities in data, where the Manifold Hypothesis fails. Singularities include branching points, self-intersections, boundaries, and kinks in data distribution. Hades works by:
