@@ -32,13 +32,13 @@ setup(
     author="Uzu Lim, Harald Oberhauser, Vidit Nanda",
     author_email="finnlimsh@gmail.com",
     license="BSD-3-Clause",
-    packages=["hades"],
+    packages=[],
     install_requires=requirements(),
     extras_require={
         "testing": [],
         "examples": [],
     },
-    python_requires=">=3.8",
+    python_requires=">=3.8, <=3.12",
     classifiers=[
         "Intended Audience :: Science/Research",
         "Intended Audience :: Education",
