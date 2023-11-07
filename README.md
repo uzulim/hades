@@ -4,7 +4,7 @@
 
 by Uzu Lim, Harald Oberhauser, and Vidit Nanda
 
-Hades detects singularities in data, where the Manifold Hypothesis fails. Singularities include branching points, self-intersections, boundaries, and kinks in data distribution. Hades works by:
+Hades is a fast singularity detection algorithm. Singularities are points in data where the Manifold Hypothesis fails, such as  cusps and self-intersections. Hades does *not* use topological methods, and instead it works by:
 
 1. Locally performing dimensionality reduction, and then
 2. Performing a kernel goodness-of-fit test against the uniform distribution over a disk. 
@@ -55,3 +55,5 @@ verdict = judge(X, search_range={'r': (0.05, 0.15), 't': (0.7, 0.9)},
 verdict = judge(X, search_list = [{'a': 0.1, 'k': 50, 't': 0.9}, {'a': 0.5, 'k': 50, 't': 0.9}, {'a': 0.9, 'k': 50, 't': 0.9}])
 ```
 
+## Notebooks
+There are `Jupyter` notebooks in the `notebooks` folder that reproduce computational experiments in the paper. 
