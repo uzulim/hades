@@ -39,6 +39,7 @@ The following are hyperparameters used by `hades` :
 - `k`: k nearest neighbors
 - `t`: threshold for PCA ($0 < t < 1$)
 - `a`: kernel parameter ($0 < a < 1$)
+
 (only one of `r` and `k` are used at each time, so that only 3 hyperparameters are relevant in each run)
 
 The following are 3 modes of performing hyperparameter search. The default run is the fully automatic search, only over the radius parameter.
