@@ -1,8 +1,8 @@
 import random
 import numpy as np
 from scipy.io import loadmat
-import misc
-from misc import bounding_box_size
+from . import misc
+from .misc import bounding_box_size
 
 
 def _sphere(N, dim, ambient_dim=None, **kwargs):

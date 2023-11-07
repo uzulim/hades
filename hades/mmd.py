@@ -7,7 +7,7 @@ from statsmodels.distributions.empirical_distribution import ECDF
 from sklearn.linear_model import LinearRegression
 from scipy.spatial.distance import cdist
 
-import gen
+from . import gen
 
 
 def unif_mmd(X, ker_alpha, N_cutoff=10):

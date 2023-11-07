@@ -11,9 +11,9 @@ from multiprocessing.dummy import Pool as ThreadPool
 from sklearn.model_selection import ParameterGrid
 from scipy.stats import gaussian_kde
 
-import gen, mmd, misc
-from misc import pca_reduce, print_toggle, power_add, power_subtract
-from mmd import mmd_json_load, mmd_make_ecdf, mmd_pval_fun
+from . import gen, mmd, misc
+from .misc import pca_reduce, print_toggle, power_add, power_subtract
+from .mmd import mmd_json_load, mmd_make_ecdf, mmd_pval_fun
 
 
 def uniformity(Y, pca_thr=0.95, ker_alpha=0.5, mmd_expr_cutoff=10, mmd_data=None, reduce_dim=True, max_mult=np.inf):
