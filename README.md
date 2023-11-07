@@ -4,10 +4,12 @@
 
 by Uzu Lim, Harald Oberhauser, and Vidit Nanda
 
-Hades is a fast singularity detection algorithm. Singularities are points in data where the Manifold Hypothesis fails, such as  cusps and self-intersections. Hades does *not* use topological methods, and instead it works by:
+HADES is a fast singularity detection algorithm. Singularities are points in data where the Manifold Hypothesis fails, such as  cusps and self-intersections. HADES does *not* use topological methods, and instead works by:
 
 1. Locally performing dimensionality reduction, and then
-2. Performing a kernel goodness-of-fit test against the uniform distribution over a disk. 
+2. Performing a kernel goodness-of-fit test against the uniform distribution over a disk.
+
+HADES stands for *Hypothesis-testing Algorithm for Detection and Exploration of Singularities*.
 
 ## Installation.
 
