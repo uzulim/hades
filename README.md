@@ -1,6 +1,6 @@
 # HADES: Fast Singularity Detection with Kernel
 
-<img width="1008" alt="banner" src="https://github.com/uzulim/hades/assets/56029596/9fb3e785-2ad5-4d8b-baf8-479f45d1d747">
+<img width="1008" alt="banner" src="https://github.com/uzulim/hades/assets/56029596/dc1956c7-da1c-4591-8118-014e690f5bc4">
 
 by Uzu Lim, Harald Oberhauser, and Vidit Nanda
 
