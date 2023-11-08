@@ -2,14 +2,9 @@
 
 <img width="1008" alt="banner" src="https://github.com/uzulim/hades/assets/56029596/dc1956c7-da1c-4591-8118-014e690f5bc4">
 
-by Uzu Lim, Harald Oberhauser, and Vidit Nanda
+[Paper link.](https://arxiv.org/abs/2311.04171) Created by Uzu Lim, Harald Oberhauser, and Vidit Nanda
 
-HADES is a fast singularity detection algorithm. Singularities are points in data where the Manifold Hypothesis fails, such as  cusps and self-intersections. HADES does *not* use topological methods, and instead works by:
-
-1. Locally performing dimensionality reduction, and then
-2. Performing a kernel goodness-of-fit test against the uniform distribution over a disk.
-
-HADES stands for *Hypothesis-testing Algorithm for Detection and Exploration of Singularities*.
+HADES is a fast singularity detection algorithm. Singularities are points in data where the Manifold Hypothesis fails, such as cusps and self-intersections. HADES does *not* use topological methods, and instead works by (1) Locally applying dimensionality reduction and then (2) Performing a kernel goodness-of-fit test. HADES stands for *Hypothesis-testing Algorithm for Detection and Exploration of Singularities*.
 
 ## Installation.
 
