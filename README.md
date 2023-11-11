@@ -8,9 +8,9 @@ HADES is a fast singularity detection algorithm. Singularities are points in dat
 
 ## Installation.
 
-To install, clone the repository and use `Poetry`:
+To install, clone the repository and use `pip`:
 ```
-$ poetry install
+$ pip install .
 ```
 
 ## Usage
