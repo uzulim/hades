@@ -202,12 +202,14 @@ class Hades:
     """Classifier for singularity detection."""
 
     def __init__(self):
+        src_dir = os.path.dirname(os.path.abspath(__file__))
         self.settings = {'bt_leaf': 40,
                          'mmd_expr_cutoff': 10,
                          'max_mult': 100,
                          'multithread': True,
                          'n_cores': -1,
-                         'mmd_filename': 'mmd_data'}
+                         'src_dir': src_dir,
+                         'mmd_filename': f'{src_dir}/mmd_data'}
         
         # hhp = Hyper-hyperparameter
         # hhp is used to run hyperparameter search
@@ -995,12 +997,13 @@ def judge(X, search_auto=['r'], search_range=None, search_list=None, search_res=
         search_res = {'r': 5, 'k': 5, 't': 3, 'a': 3}
 
     clf = Hades()
+    src_dir = clf.settings['src_dir']
     # Priority: search_list > search_range > search_auto
     if search_list is not None:
         # Mode 1. Hyperparameter search using search_list
         for item in search_list:
             if 'a' in item.keys():
-                clf.settings['mmd_filename'] = 'mmd_data_big'
+                clf.settings['mmd_filename'] = f'{src_dir}/mmd_data_big'
 
         search_list = [hpdict_convert(item) for item in search_list]
         clf.fit(X, hp=search_list, probe_prop=witness_prop, verbose=verbose)
@@ -1008,7 +1011,7 @@ def judge(X, search_auto=['r'], search_range=None, search_list=None, search_res=
     elif search_range is not None:
         # Mode 2. Hyperparameter search using search_range
         if 'a' in search_range.keys():
-            clf.settings['mmd_filename'] = 'mmd_data_big'
+            clf.settings['mmd_filename'] = f'{src_dir}/mmd_data_big'
 
         search_1dgrids = {key: np.linspace(search_range[key][0], search_range[key][1], search_res[key]) for key in search_range.keys()}
         neighbor = {'r', 'k'}.intersection(search_range.keys())
@@ -1038,7 +1041,7 @@ def judge(X, search_auto=['r'], search_range=None, search_list=None, search_res=
         # Process inputs
         search_auto_set = set(search_auto)
         if 'a' in search_auto_set:
-            clf.settings['mmd_filename'] = 'mmd_data_big'
+            clf.settings['mmd_filename'] = f'{src_dir}/mmd_data_big'
         assert search_auto_set.issubset({'r', 'k', 't', 'a'}), 'search_auto must be a subset of {"r", "k", "t", "a"}.'
         neighbor = {'r', 'k'}.intersection(search_auto_set)
         assert len(neighbor) < 2, 'Cannot specify both "r" and "k" in search_auto.'
