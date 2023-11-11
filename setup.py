@@ -10,6 +10,7 @@ setup(
     packages=["hades"],
     python_requires='>=3.8, <=3.11',
     install_requires=requirements(),
+    package_data={'hades': ['mmd_data.json', 'mmd_data_big.json']},
 
     author='Uzu Lim',
     author_email='finnlimsh@gmail.com',
