@@ -50,7 +50,9 @@ verdict = judge(X, search_range={'r': (0.05, 0.15), 't': (0.7, 0.9)},
                    search_res={'r': 5, 't': 3})
 
 # Mode 3. Search over a specified list of hyperparameters
-verdict = judge(X, search_list = [{'a': 0.1, 'k': 50, 't': 0.9}, {'a': 0.5, 'k': 50, 't': 0.9}, {'a': 0.9, 'k': 50, 't': 0.9}])
+verdict = judge(X, search_list = [{'k': 50, 't': 0.9, 'a': 0.1},
+                                  {'k': 50, 't': 0.9, 'a': 0.5},
+                                  {'k': 50, 't': 0.9, 'a': 0.9}])
 ```
 
 ## Notebooks
