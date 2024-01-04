@@ -627,7 +627,7 @@ class Hades:
             elif not np.any(1 - filt_now):
                 auc = 1
             else:
-                q /= np.linalg.norm(q)  # Normalise
+                q = q / np.linalg.norm(q)  # Normalise
                 y = Y @ q.reshape(-1, 1)
                 y = y.reshape(-1)  # Y projected to q
                 auc = roc_auc_score(filt_now, y)
